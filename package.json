@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "phaser": "^3.54.0",
     "phaser-ce": "^2.17.0"
   }
 }
