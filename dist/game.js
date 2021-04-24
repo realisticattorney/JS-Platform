@@ -1,17 +1,14 @@
-let game;
-
-// global game options
-let gameOptions = {
+const gameOptions = {
 
     // platform speed range, in pixels per second
-    platformSpeedRange: [300, 300],
+    platformSpeedRange: [300, 600],
 
     // mountain speed, in pixels per second
-    mountainSpeed: 80,
+    mountainSpeed: 200,
 
     // spawn range, how far should be the rightmost platform from the right edge
     // before next platform spawns, in pixels
-    spawnRange: [80, 300],
+    spawnRange: [20, 300],
 
     // platform width range, in pixels
     platformSizeRange: [90, 300],
@@ -20,28 +17,28 @@ let gameOptions = {
     platformHeightRange: [-5, 5],
 
     // a scale to be multiplied by platformHeightRange
-    platformHeighScale: 20,
+    platformHeighScale: 600,
 
     // platform max and min height, as screen height ratio
     platformVerticalLimit: [0.4, 0.8],
 
     // player gravity
-    playerGravity: 900,
+    playerGravity: 4000,
 
     // player jump force
-    jumpForce: 400,
+    jumpForce: 2000,
 
     // player starting X position
-    playerStartPosition: 200,
+    playerStartPosition: 250,
 
     // consecutive jumps allowed
     jumps: 2,
 
     // % of probability a coin appears on the platform
-    coinPercent: 25,
+    coinPercent: 60,
 
     // % of probability a fire appears on the platform
-    firePercent: 25
+    firePercent: 15
 }
 
 window.onload = function() {
