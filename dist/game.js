@@ -1,17 +1,17 @@
 const gameOptions = {
 
     // platform speed range, in pixels per second
-    platformSpeedRange: [300, 600],
+    platformSpeedRange: [600, 600],
 
     // mountain speed, in pixels per second
-    mountainSpeed: 200,
+    mountainSpeed: 40,
 
     // spawn range, how far should be the rightmost platform from the right edge
     // before next platform spawns, in pixels
-    spawnRange: [20, 300],
+    spawnRange: [50, 500],
 
     // platform width range, in pixels
-    platformSizeRange: [90, 300],
+    platformSizeRange: [300, 900],
 
     // a height range between rightmost platform and next platform to be spawned
     platformHeightRange: [-5, 5],
@@ -23,10 +23,10 @@ const gameOptions = {
     platformVerticalLimit: [0.4, 0.8],
 
     // player gravity
-    playerGravity: 4000,
+    playerGravity: 3800,
 
     // player jump force
-    jumpForce: 2000,
+    jumpForce: 1500,
 
     // player starting X position
     playerStartPosition: 250,
@@ -38,7 +38,7 @@ const gameOptions = {
     coinPercent: 60,
 
     // % of probability a fire appears on the platform
-    firePercent: 15
+    firePercent: 95
 }
 
 window.onload = function() {
@@ -49,7 +49,7 @@ window.onload = function() {
         width: 1334,
         height: 750,
         scene: [preloadGame, playGame],
-        backgroundColor: 0x0c88c7,
+        backgroundColor: 0xa41e96,
 
         // physics settings
         physics: {
