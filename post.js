@@ -10,8 +10,3 @@ async function postData(url , data) {
   console.log(datata)
 }
 
-
-postData('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0ImWeMs9BETev9fZKuGY/scores', { 
-	"user": "John Doe",
-	"score": 42
-})

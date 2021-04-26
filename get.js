@@ -1,10 +1,3 @@
-import scoreSystem from './src/score/API.js'
-
-scoreSystem.postData('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0ImWeMs9BETev9fZKuGY/scores', { 
-	"user": "Lolzz",
-	"score": 20
-})
-
 
 
 const asyncWeather = async () => {

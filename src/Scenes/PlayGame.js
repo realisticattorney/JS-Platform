@@ -263,7 +263,7 @@ export default  class playGame extends Phaser.Scene{
         // game over
         if(this.player.y > game.config.height){
           scoreSystem('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0ImWeMs9BETev9fZKuGY/scores', { 
-	"user": "John Doe",
+	"user": "Lolz",
 	"score": this.score
 })
           this.score = 0;
