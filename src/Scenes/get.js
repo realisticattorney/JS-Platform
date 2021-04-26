@@ -12,5 +12,6 @@ const asyncWeather = async () => {
   }
 };
 
-   
+
+
 export default asyncWeather
