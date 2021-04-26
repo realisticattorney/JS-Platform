@@ -5,7 +5,7 @@ export default {
   width: 1334,
   height: 750,
   // scene: [preloadGame, playGame],
-  backgroundColor: 0x0c88c7,
+  backgroundColor: 0xa41e96,
 
   // physics settings
   physics: {
