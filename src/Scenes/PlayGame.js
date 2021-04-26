@@ -1,5 +1,6 @@
 import 'phaser';
 import gameOptions from '../Objects/gameOptions';
+import scoreSystem from '../score/API';
 // playGame scene
 export default  class playGame extends Phaser.Scene{
   constructor(){
@@ -19,6 +20,7 @@ export default  class playGame extends Phaser.Scene{
                 platform.scene.platformPool.add(platform)
             }
         });
+        
 
         // platform pool
         this.platformPool = this.add.group({
@@ -29,6 +31,8 @@ export default  class playGame extends Phaser.Scene{
             }
         });
 
+
+        
         // group with all active coins.
         this.coinGroup = this.add.group({
 
@@ -64,6 +68,13 @@ export default  class playGame extends Phaser.Scene{
                 fire.scene.fireGroup.add(fire)
             }
         });
+
+        this.score = 0;
+        this.scoreText = this.add.text(100, 70, 'Score: 0', {
+          fontSize: '32px',
+          fill: '#000',
+        });
+
 
         // adding a mountain
         this.addMountains()
@@ -105,12 +116,16 @@ export default  class playGame extends Phaser.Scene{
                 ease: "Cubic.easeOut",
                 callbackScope: this,
                 onComplete: function(){
+                    this.score += 10;
+                    this.scoreText.setText(`Score: ${this.score}`);
                     this.coinGroup.killAndHide(coin);
                     this.coinGroup.remove(coin);
                 }
             });
 
         }, null, this);
+
+
 
         // setting collisions between the player and the fire group
         this.physics.add.overlap(this.player, this.fireGroup, function(player, fire){
@@ -242,9 +257,17 @@ export default  class playGame extends Phaser.Scene{
 
     update(){
 
+      this.scoreText.setScrollFactor(0, 0);
+
+  
         // game over
         if(this.player.y > game.config.height){
-            this.scene.start("PlayGame");
+          scoreSystem('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0ImWeMs9BETev9fZKuGY/scores', { 
+	"user": "John Doe",
+	"score": this.score
+})
+          this.score = 0;
+          this.scene.start("Title");
         }
 
         this.player.x = gameOptions.playerStartPosition;
