@@ -6,10 +6,9 @@ const asyncWeather = async () => {
     const data = await response.json();
     return { data };
   } catch (error) {
-    const errorMessage = document.querySelector('.error-message');
-    errorMessage.innerHTML = `${error}`;
-    return errorMessage;
+    console.log(error);
   }
 };
+
 
 export default asyncWeather;
