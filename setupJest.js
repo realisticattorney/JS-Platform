@@ -1,3 +1,4 @@
+/* eslint-disable no-console  */
 global.fetch = require('jest-fetch-mock');
 
 process.on('unhandledRejection', (reason, promise) => {

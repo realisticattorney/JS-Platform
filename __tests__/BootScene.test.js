@@ -1,3 +1,4 @@
+import Phaser from 'phaser';
 import BootScene from '../src/Scenes/BootScene';
 import 'jest-expect-subclass';
 
