@@ -246,13 +246,14 @@ export default class playGame extends Phaser.Scene {
     // game over
     if (this.player.y > this.sys.scale.height) {
       const user = document.getElementById('fname');
-      scoreSystem('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/0ImWeMs9BETev9fZKuGY/scores', {
+      scoreSystem('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/riKIWrWievm0U8kNlI8w/scores', {
         user: user.value,
         score: this.score,
       });
       this.score = 0;
       this.scene.start('Title');
     }
+    
 
     this.player.x = gameOptions.playerStartPosition;
 
