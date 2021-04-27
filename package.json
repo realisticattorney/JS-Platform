@@ -22,9 +22,11 @@
     }
   },
   "scripts": {
-    "build": "webpack --config webpack/prod.js ",
-    "start": "webpack-dev-server --config webpack/base.js --open",
-    "test": "jest"
+    "test": "jest",
+    "server": "webpack serve",
+    "start": "webpack --watch",
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
