@@ -13,15 +13,12 @@ export default class OptionsScene extends Phaser.Scene {
     this.musicButton = this.add.image(200, 200, 'checkedBox');
     this.musicText = this.add.text(250, 190, 'Music Enabled', { fontSize: 24 });
 
-
-
     this.musicButton.setInteractive();
 
     this.musicButton.on('pointerdown', () => {
       this.model.musicOn = !this.model.musicOn;
       this.updateAudio();
     });
-
 
     this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
 

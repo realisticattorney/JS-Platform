@@ -62,7 +62,7 @@ JavaScript Captsone Project By German Aquila
 
 ## � Contributing
 
-This is a project for educational purposes only, not open to contributions (thank for your interest).
+This is a project for educational purposes only, not open to contributions (thank for your interest, however).
 
 ## Attributions and Credit
 
