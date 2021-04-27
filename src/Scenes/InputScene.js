@@ -16,7 +16,7 @@ export default class InputScene extends Phaser.Scene {
         const user = document.getElementById('fname');
         if (user.value !== '') {
           element.style.display = 'none';
-          this.scene.start('Title');
+          this.scene.start('Preloader');
         }
       }
     });
