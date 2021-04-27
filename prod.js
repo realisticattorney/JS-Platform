@@ -6,7 +6,8 @@ const base = require('./base');
 module.exports = merge(base, {
   mode: 'production',
   output: {
-    filename: 'bundle.min.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'project.bundle.js',
   },
   devtool: false,
   performance: {
