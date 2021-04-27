@@ -1,15 +1,25 @@
+/* eslint-disable comma-dangle */
+
 const webpack = require('webpack');
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-
-  entry: './src/index.js',
-
+  mode: 'development',
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/build/',
-    filename: 'project.bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js'
   },
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new webpack.DefinePlugin({
+      CANVAS_RENDERER: JSON.stringify(true),
+      WEBGL_RENDERER: JSON.stringify(true),
+    }),
+  ],
   module: {
     rules: [{
       test: /\.(png|jpg|gif)$/,
@@ -36,13 +46,5 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist')
-  },
-
-  plugins: [
-    new webpack.DefinePlugin({
-      CANVAS_RENDERER: JSON.stringify(true),
-      WEBGL_RENDERER: JSON.stringify(true),
-    }),
-  ],
-
+  }
 };
