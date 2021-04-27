@@ -1,4 +1,4 @@
-import 'phaser';
+import Phaser from 'phaser';
 
 export default {
   type: Phaser.AUTO,
@@ -8,7 +8,6 @@ export default {
 
   // physics settings
   physics: {
-      default: "arcade"
-  }
-}
-
+    default: 'arcade',
+  },
+};

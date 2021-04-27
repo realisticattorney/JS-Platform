@@ -1,13 +1,11 @@
-import 'phaser';
-import config from '../Config/config';
-import Button from '../Objects/Button';
+import Phaser from 'phaser';
 
 export default class InputScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Input');
   }
 
-  create () {
+  create() {
     const element = document.getElementById('form');
     element.style.display = 'flex';
     element.style.position = 'absolute';
@@ -19,6 +17,8 @@ export default class InputScene extends Phaser.Scene {
         if (user.value !== '') {
           element.style.display = 'none';
           this.scene.start('Title');
-        }}})
+        }
+      }
+    });
   }
 }
