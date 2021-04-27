@@ -1,50 +1,30 @@
-/* eslint-disable comma-dangle */
-
-const webpack = require('webpack');
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: {
+    app: './src/index.js',
+  },
+
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js'
+    filename: 'main.js',
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
-    new webpack.DefinePlugin({
-      CANVAS_RENDERER: JSON.stringify(true),
-      WEBGL_RENDERER: JSON.stringify(true),
-    }),
-  ],
   module: {
-    rules: [{
-      test: /\.(png|jpg|gif)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          outputPath: 'assets'
-        }
-      }
-    },
-    {
-      test: /\.(mp3|wav|wma|ogg|aif)$/,
-      loader: 'file-loader',
-    },
-    {
-      test: /\.html$/i,
-      loader: 'html-loader',
-    },
-    {
-      test: /\.css$/i,
-      use: ['style-loader', 'css-loader'],
-    }, { test: /\.jsx?$/, exclude: /'node_modules'/, loader: 'babel-loader' },
-    ]
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['@babel/preset-env', { targets: 'defaults' }],
+            ],
+            plugins: ['@babel/plugin-proposal-class-properties'],
+          },
+        },
+      },
+    ],
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist')
-  }
 };
