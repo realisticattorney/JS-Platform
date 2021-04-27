@@ -1,4 +1,4 @@
-![img.png](img.png)
+![screenshot](assets/screenshot.png)
 
 **🎮️ Name of the game: Jumper\
 👥 Stakeholders:**
@@ -58,11 +58,6 @@ As the radioactive boy you can perform double jumps to go from one platform to t
 - Avoid falling
 
 # Assets
-
-## 🎨 Art
-
-- [Art Assets: Dusk Mountain Background | Ansimuz Games](https://ansimuz.com/site/art-assets-dusk-mountain-background/)
-- [Kenney • Assets](https://www.kenney.nl/assets)
 
 ## 🔊 Sound
 
