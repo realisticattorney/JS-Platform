@@ -1,4 +1,4 @@
-async const scoreSystem = (url, data) => {
+const scoreSystem = async (url, data) => {
   const response = await fetch(url, {
     method: 'POST',
     headers: {
@@ -10,6 +10,6 @@ async const scoreSystem = (url, data) => {
   return {
     datata,
   };
-}
+};
 
 export default scoreSystem;
