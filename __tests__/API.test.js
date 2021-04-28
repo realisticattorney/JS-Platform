@@ -1,57 +1,53 @@
-import scoreSystem from '../src/score/API';
+import  scoreSystem  from '../src/score/API';
+import  APIgetter  from '../src/score/APIgetter';
 import 'regenerator-runtime';
+
+jest.mock('../__mocks__/resquests.js');
+
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/riKIWrWievm0U8kNlI8w/scores';
 
 beforeEach(() => {
   fetch.resetMocks();
 });
 
-it('Return score', async () => {
-  fetch.mockResponseOnce(JSON.stringify({
-    result: [
-      {
-        user: 'John Doe',
-        score: 42,
-      }],
-  }));
-  const res = scoreSystem();
-  expect(res[0].score).toEqual(42);
-  expect(fetch.mock.calls.length).toEqual(1);
+test('saves the score and username to the leaderBoard', () => {
+  scoreSystem(url, 100)
+    .then((score) => expect(score)
+      .toEqual({ result: 'Leaderboard score created correctly.' }));
 });
 
-it('Return name', async () => {
-  fetch.mockResponseOnce(JSON.stringify({
-    result: [
-      {
-        user: 'John Doe',
-        score: 42,
-      }],
-  }));
-  const res = scoreSystem();
-  expect(res[0].user).toEqual('John Doe');
-  expect(fetch.mock.calls.length).toEqual(1);
+test('get score and username in descending order from the leaderBoard', () => {
+  APIgetter().then((scores) => expect(typeof scores).toEqual('object'));
 });
 
-it('fails due to incorrect score', async () => {
-  fetch.mockResponseOnce(JSON.stringify({
-    result: [
-      {
-        user: 'John Doe',
-        score: 42,
-      }],
-  }));
-  const res = scoreSystem();
-  expect(res[0].score).not.toEqual(13);
-  expect(fetch.mock.calls.length).toEqual(1);
+test('ranking contains the user', () => {
+  APIgetter().then(data => {
+    expect(data).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          score: 100,
+          user: 'john doe',
+        }),
+      ]),
+    );
+  }).catch(() => { });
 });
-it('fails due to incorrect username', async () => {
+
+test('Return score', async () => {
   fetch.mockResponseOnce(JSON.stringify({
     result: [
       {
-        user: 'John Doe',
-        score: 42,
+        user: 'john doe',
+        score: 100,
       }],
   }));
-  const res = scoreSystem();
-  expect(res[0].user).not.toEqual('Neko Master');
-  expect(fetch.mock.calls.length).toEqual(1);
+  const res = await APIgetter()
+  expect(res.data.result).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({
+        score: 100,
+        user: 'john doe',
+      }),
+    ]),
+  );
 });
