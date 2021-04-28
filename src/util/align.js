@@ -1,6 +1,6 @@
 /* jshint esversion: 6 */
 export class Align {
-  static scaleToGameW(obj, per, scene) {
+  static scaleToGameW = (obj, per, scene) => {
     obj.displayWidth = scene.sys.game.config.width * per;
     obj.scaleY = obj.scaleX;
   }

@@ -16,11 +16,7 @@ export default class ScoreScene extends Phaser.Scene {
       topTen.forEach((scorePair) => {
         this.scoreText = this.add.text(550, i, `Name: ${scorePair.user} Score: ${scorePair.score}`, { fontSize: '16px', fill: '#fff' });
         i += 30;
-        // const div = document.createElement('div')
-        // div.innerText = `Name: ${scorePair.user} Score: ${scorePair.score}`
-        // document.body.appendChild(div)
       });
-      // console.log([...result.data.result])
     });
 
     this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
