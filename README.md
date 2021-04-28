@@ -38,7 +38,7 @@ JavaScript Captsone Project By German Aquila
 
 # Live demo
 
-[Live Demo]()
+[Live Demo](https://zealous-nightingale-86428f.netlify.app/)
 
 # How to run this project
 
