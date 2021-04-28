@@ -14,21 +14,20 @@ JavaScript Captsone Project By German Aquila
 
 - Built a platform game
 - To add a theme by the use of colors and music
-- To play around with the game physics variables, such as gravity and speed (pace of the game), number of rewards and obstacles (difficulty).
-- To make the highest scores accesible to every user by the usage of an API.
+- To play around with the game physics variables, such as gravity and speed (pace of the game), number of rewards, and obstacles (difficulty).
+- To make the highest scores accessible to every user by the usage of an API.
 
 ## How to play
 
 - Enter your name after initializing the app
 - Click on Play
-- The goal is to collect as many coins as possible to achieve a high score which will be shown on the leaderboard, which is accessible from the menu. Avoid falling and getting burned by fire.
+- Jump by pressing left-click anywhere on the screen. The goal is to collect as many coins as possible to achieve a high score which will be shown on the leaderboard, which is accessible from the menu. Avoid falling and getting burned by fire.
 
 ## Features
 
 - 5-option menu. Play, Options, Credits, Leaderboard, Instructions 
-- In Options, the user can disable music theme.
-- On Leaderboard the user can see the highest 10 scorers and their scores.
-
+- In Options, the user can disable the music theme.
+- On Leaderboard, the user can see the highest 10 scorers and their scores.
 
 # Build with
 
@@ -45,7 +44,8 @@ JavaScript Captsone Project By German Aquila
 - Download this project or install running the next command in the terminal: git clone https://github.com/realisticattorney/JS-Platform.git
 - cd JS-Platform
 - In terminal run: npm install
-- And then: npm run dev
+- And then: npm run build
+- Finally: npm run start
 
 # How to run the tests
 
@@ -62,11 +62,12 @@ JavaScript Captsone Project By German Aquila
 
 ## � Contributing
 
-This is a project for educational purposes only, not open to contributions (thank for your interest, however).
+This is a project for educational purposes only, not open to contributions (thank you for your interest, however).
 
 ## Attributions and Credit
 
-Special thanks to Microverse, Emanuele Feronato, Scott Westover and the devs team from Phaser.
+Special thanks to Microverse, Emanuele Feronato, Scott Westover, and the devs team from Phaser.
+
 
 ## Show your support
 
