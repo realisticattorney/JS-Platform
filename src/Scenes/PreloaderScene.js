@@ -11,7 +11,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
   preload() {
     // add logo image
-    this.add.image(400, 200, 'logo');
+    this.add.image(600, 200, 'logo');
 
     // display progress bar
     const progressBar = this.add.graphics();
@@ -80,12 +80,37 @@ export default class PreloaderScene extends Phaser.Scene {
     this.timedEvent = this.time.delayedCall(3000, this.ready, [], this);
 
     // load assets needed in our game
-    this.load.image('blueButton1', '/assets/ui/blue_button02.png');
-    this.load.image('blueButton2', '/assets/ui/blue_button03.png');
-    this.load.image('phaserLogo', '/assets/logo.png');
-    this.load.image('box', '/assets/ui/grey_box.png');
-    this.load.image('checkedBox', '/assets/ui/blue_boxCheckmark.png');
-    this.load.audio('bgMusic', '/assets/TownTheme.mp3');
+    this.load.image('blueButton1', './assets/ui/blue_button02.png');
+    this.load.image('blueButton2', './assets/ui/blue_button03.png');
+    this.load.image('phaserLogo', './assets/logo.png');
+    this.load.image('box', './assets/ui/grey_box.png');
+    this.load.image('checkedBox', './assets/ui/blue_boxCheckmark.png');
+    this.load.audio('bgMusic', './assets/TownTheme.mp3');
+    this.load.image('platform', './assets/platform.png');
+
+    // player is a sprite sheet made by 24x48 pixels
+    this.load.spritesheet('player', './assets/player.png', {
+      frameWidth: 24,
+      frameHeight: 48,
+    });
+
+    // the coin is a sprite sheet made by 20x20 pixels
+    this.load.spritesheet('coin', './assets/coin.png', {
+      frameWidth: 20,
+      frameHeight: 20,
+    });
+
+    // the firecamp is a sprite sheet made by 32x58 pixels
+    this.load.spritesheet('fire', './assets/fire.png', {
+      frameWidth: 40,
+      frameHeight: 70,
+    });
+
+    // mountains are a sprite sheet made by 512x512 pixels
+    this.load.spritesheet('mountain', './assets/mountain.png', {
+      frameWidth: 512,
+      frameHeight: 512,
+    });
   }
 
   ready() {

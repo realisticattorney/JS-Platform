@@ -2,7 +2,7 @@
 
 JavaScript Captsone Project By German Aquila
 
-![screenshot](/assets/screenshot.png)
+![screenshot](screenshot.png)
 
 # What it does
 
@@ -25,10 +25,9 @@ JavaScript Captsone Project By German Aquila
 
 ## Features
 
-- 5-option menu. Play, Options, Credits, Leaderboard, Instructions 
+- 5-option menu. Play, Options, Credits, Leaderboard, Instructions
 - In Options, the user can disable music theme.
 - On Leaderboard the user can see the highest 10 scorers and their scores.
-
 
 # Build with
 
