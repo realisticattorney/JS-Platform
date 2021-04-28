@@ -1,4 +1,4 @@
-![screenshot](assets/screenshot.png)
+![screenshot](/dist/assets/screenshot.png)
 
 **🎮️ Name of the game: Jumper\
 👥 Stakeholders:**
