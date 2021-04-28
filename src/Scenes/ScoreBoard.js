@@ -13,7 +13,7 @@ export default class ScoreScene extends Phaser.Scene {
       result.data.result.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
       let i = 150;
       const topTen = [...result.data.result].slice(0, 10);
-      topTen.forEach(scorePair => {
+      topTen.forEach((scorePair) => {
         this.scoreText = this.add.text(550, i, `Name: ${scorePair.user} Score: ${scorePair.score}`, { fontSize: '16px', fill: '#fff' });
         i += 30;
         // const div = document.createElement('div')

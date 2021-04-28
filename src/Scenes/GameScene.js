@@ -4,6 +4,7 @@ export default class GameScene extends Phaser.Scene {
   constructor() {
     super('Game');
   }
+
   create() {
     // setting player animation
     this.anims.create({

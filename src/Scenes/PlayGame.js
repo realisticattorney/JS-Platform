@@ -253,7 +253,6 @@ export default class playGame extends Phaser.Scene {
       this.score = 0;
       this.scene.start('Title');
     }
-    
 
     this.player.x = gameOptions.playerStartPosition;
 
