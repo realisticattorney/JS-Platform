@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import Button from '../Objects/Button';
-import asyncWeather from './get';
+import APIgetter from '../score/APIgetter';
 
 export default class ScoreScene extends Phaser.Scene {
   constructor() {
@@ -8,7 +8,7 @@ export default class ScoreScene extends Phaser.Scene {
   }
 
   create() {
-    const promise = asyncWeather();
+    const promise = APIgetter();
     promise.then((result) => {
       result.data.result.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
       let i = 150;
