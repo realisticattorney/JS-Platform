@@ -1,5 +1,5 @@
-import  scoreSystem  from '../src/score/API';
-import  APIgetter  from '../src/score/APIgetter';
+import scoreSystem from '../src/score/API';
+import APIgetter from '../src/score/APIgetter';
 import 'regenerator-runtime';
 
 jest.mock('../__mocks__/resquests.js');
@@ -21,7 +21,7 @@ test('get score and username in descending order from the leaderBoard', () => {
 });
 
 test('ranking contains the user', () => {
-  APIgetter().then(data => {
+  APIgetter().then((data) => {
     expect(data).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
@@ -41,7 +41,7 @@ test('Return score', async () => {
         score: 100,
       }],
   }));
-  const res = await APIgetter()
+  const res = await APIgetter();
   expect(res.data.result).toEqual(
     expect.arrayContaining([
       expect.objectContaining({

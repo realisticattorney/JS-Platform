@@ -8,7 +8,7 @@ const scoreSystem = async (url, data) => {
   });
   const datata = await response.json();
   return {
-    datata
+    datata,
   };
 };
 

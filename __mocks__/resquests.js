@@ -10,10 +10,9 @@ const scoreSystem = async (url, data) => {
   });
   const datata = await response.json();
   return {
-    datata
+    datata,
   };
 };
-
 
 const APIgetter = async () => {
   try {
@@ -27,4 +26,4 @@ const APIgetter = async () => {
   }
 };
 
-export { APIgetter , scoreSystem };
+export { APIgetter, scoreSystem };
