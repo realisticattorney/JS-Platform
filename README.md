@@ -10,6 +10,10 @@ JavaScript Captsone Project By German Aquila
 
 # GAME DESIGN
 
+## Game Design Document
+
+[Game Design Document (GDD) Link](./GDD.md)
+
 ## Objectives for this project
 
 - Built a platform game
