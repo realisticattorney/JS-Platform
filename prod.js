@@ -24,11 +24,4 @@ module.exports = merge(base, {
       }),
     ],
   },
-  plugins: [
-    new CopyPlugin({
-      patterns: [
-        { from: './src/assets', to: 'src/assets' }, // Configure // the path from where webpack will copy your assets from and the  // path where it will put it when the build is done, change it     // according to your app organization
-      ],
-    }),
-  ],
 });

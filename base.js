@@ -8,11 +8,6 @@ module.exports = {
   devtool: 'eval-source-map',
   module: {
     rules: [
-  {
-        test: /\.(mp3|wav|wma|ogg|aif)$/,
-        loader: 'file-loader',
-      },
-  
       {
         test: /\.js$/,
         exclude: /node_modules/,
