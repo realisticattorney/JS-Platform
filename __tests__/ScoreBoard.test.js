@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import ScoreBoard from '../scenes/ScoreBoard';
+import ScoreBoard from '../src/Scenes/ScoreBoard';
 import 'jest-expect-subclass';
 
 test('LeaderBoardScene should be a subclass of Phaser.Scene', () => {
