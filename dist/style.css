@@ -1,20 +1,5 @@
-#form {
-  position: absolute;
-  top: 410px;
-  left: 279px;
-  display: none;
-  width: 242px;
-}
 body {
-  width: 800px;
+  width: 1334px;
   margin: 0 auto;
   position: relative;
-}
-#score {
-  position: absolute;
-  display: flex;
-  width: 400px;
-  flex-direction: column;
-  top: 10%;
-  left: 20%;
 }
