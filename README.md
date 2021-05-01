@@ -2,6 +2,7 @@
 
 JavaScript Captsone Project By German Aquila
 
+![screenshot](/dist/assets/evilglitch2.png)
 ![screenshot](/dist/assets/screenshot.png)
 
 # What it does
